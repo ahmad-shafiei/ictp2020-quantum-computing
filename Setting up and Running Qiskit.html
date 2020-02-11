@@ -1,0 +1,67 @@
+
+<!-- saved from url=(0039)https://users.ictp.it/~johannes/qiskit/ -->
+<html><script>(function(){var PluginArray=function(plugins){var last=plugins.length;for(var i=0;i<last;i++){this[i]=this[plugins[i].name]=plugins[i];}var Plugin=function(prop){for(var i in prop){this[i]=prop[i];}};Plugin.prototype.item=function(){};Plugin.prototype.namedItem=function(){};var dummy=new Plugin({description:"DjVu Viewer Extension for Google Chrome",filename:"djvu.js",name:"DjVu Viewer Extension",version:"",});this[last]=this[dummy.name]=dummy;Object.defineProperty(this,"length",{get:function(){return last+1}});};PluginArray.prototype.item=function(index){return this[index];};PluginArray.prototype.namedItem=function(name){for(var i=0;i<this.length;i++){if(this[i].name===name){return this[i];}}};PluginArray.prototype.refresh=function(){};var plugins=new PluginArray(navigator.plugins);Object.defineProperty(navigator,"plugins",{get:function(){return plugins}});})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Setting up and Running Qiskit</title>
+	</head>
+
+	<body>
+		<h1>Setting up Qiskit</h1>
+		
+		<p>Open a Terminal window so that you can copy and paste
+		the commands listed below. You can mark whole lines by
+		triple-clicking on them. To copy, use Ctrl+C, to paste
+		into the Terminal window, use Ctrl+Shift+V.</p>
+
+		<ol>
+			<li>Activate our Anaconda 3 installation by placing
+				an empty file named
+				<code>.use_ictp_anaconda3</code> in your
+				home directory:<br>
+				<pre>touch .use_ictp_anaconda3</pre>
+			</li>
+			<li>Log out and log in again so that the change
+				takes effect.
+			</li>
+			<li>Create an Anaconda directory on the local hard
+				disk in order to reduce the work load on
+				the file servers:<br>
+				<pre>mkdir /scratch/$USER/.anaconda3
+ln -s /scratch/$USER/.anaconda3 $HOME</pre>
+				Note that by doing this you will always have
+				to return to the same desktop computer, so
+				remember its name/position.
+			</li>
+			<li>Prepare your Linux shell for use with
+				Anaconda:<br>
+				<pre>conda init bash</pre>
+			</li>
+			<li>Create a conda environment and activate it:<br>
+				<pre>conda create -n qiskit-env python=3
+conda activate qiskit-env</pre>
+			</li>
+			<li>Install the Qiskit library:<br>
+				<pre>pip install qiskit</pre>
+			</li>
+			<li>For Jupyter, we have to create a corresponding
+				environment:<br>
+				<pre>pip install ipykernel
+python -m ipykernel install --user --name=qiskit-env</pre>
+			</li>
+			<li>Download the notebook we are going to use:
+				<a href="https://users.ictp.it/~johannes/qiskit/teleportation_superdensecoding_solutions_mys.ipynb" download="">teleportation_superdensecoding_solutions_mys.ipynb</a><br>
+				Choose the <b>Save</b> option, don't open
+				the file using an application (e.g. RStudio).
+			</li>
+		</ol>
+
+		<h1>Running Qiskit</h1>
+
+		<p>Once this is done, you can start up a Jupyter notebook
+		using the command<br>
+		</p><pre>jupyter-notebook</pre>
+		Navigate to your download folder, and click on the downloaded
+		file. Before running it, go to the <b>Kernel</b> menu and 
+		<b>Change Kernel</b> to <b>qiskit-env</b>.<p></p>
+	
+
+</body></html>
