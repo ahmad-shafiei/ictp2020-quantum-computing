@@ -6,13 +6,13 @@ listed below. You can mark whole lines by triple-clicking on them. To
 copy, use Ctrl+C, to paste into the Terminal window, use Ctrl+Shift+V.
 
 1.  Activate our Anaconda 3 installation by placing an empty file named
-    `.use_ictp_anaconda3` in your home directory:\
+    `.use_ictp_anaconda3` in your home directory:
 
         touch .use_ictp_anaconda3
 
 2.  Log out and log in again so that the change takes effect.
 3.  Create an Anaconda directory on the local hard disk in order to
-    reduce the work load on the file servers:\
+    reduce the work load on the file servers:
 
         mkdir /scratch/$USER/.anaconda3
         ln -s /scratch/$USER/.anaconda3 $HOME
@@ -20,20 +20,20 @@ copy, use Ctrl+C, to paste into the Terminal window, use Ctrl+Shift+V.
     Note that by doing this you will always have to return to the same
     desktop computer, so remember its name/position.
 
-4.  Prepare your Linux shell for use with Anaconda:\
+4.  Prepare your Linux shell for use with Anaconda:
 
         conda init bash
 
-5.  Create a conda environment and activate it:\
+5.  Create a conda environment and activate it:
 
         conda create -n qiskit-env python=3
         conda activate qiskit-env
 
-6.  Install the Qiskit library:\
+6.  Install the Qiskit library:
 
         pip install qiskit
 
-7.  For Jupyter, we have to create a corresponding environment:\
+7.  For Jupyter, we have to create a corresponding environment:
 
         pip install ipykernel
         python -m ipykernel install --user --name=qiskit-env
