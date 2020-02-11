@@ -1,6 +1,3 @@
-(function(){var PluginArray=function(plugins){var
-last=plugins.length;for(var i=0;i
-
 Setting up Qiskit
 =================
 
